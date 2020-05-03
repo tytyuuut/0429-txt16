@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+    <style>
+        .col-md-12 .btn{
+        background: #b87532;
+        transition: 1s all;
+        color: #fff;
+        }
+        textarea:hover,
+        textarea:active,
+        textarea:focus,
+        button:focus,
+        button:active,
+        button:hover,
+        .btn:active,
+        .btn.active
+        {
+        outline:0px !important;
+        -webkit-appearance:none;
+        box-shadow: none !important;
+        }
+        .center-item{
+        display: flex;
+        flex-direction: row;
+        width: 150px;
+        margin: auto;
+        }
+        #content-2 .center-item{
+        width: 100px;
+        }
+        #content-3 .center-item{
+        width: 116px;
+        }
+        .col-md-12 .t3:hover{
+        cursor: pointer;
+        color: orangered;
+        }
+        .col-md-12 .t1:hover{
+        cursor: pointer;
+        color: orangered;
+        }
+        .col-md-12 .t2:hover{
+        cursor: pointer;
+        color: orangered;
+        }
+        #content-2{
+        display: none;
+        }
+        #content-3{
+        display: none;
+        }
+        #loginForm a {
+        color: #b87532;
+        }
+
+        .btn-primary {
+        background: #b87532;
+        border-color: #b87532;
+        }
+
+        .btn-primary:hover {
+        color: #fff;
+        background-color: orangered;
+        border-color: orangered;
+        }
+
+        @media(max-width: 768px) {
+        .gallery-thumbs {
+        display: none;
+        }
+        }
+
+        .hidden {
+        position: relative;
+        height: 100%;
+        }
+
+        @media(max-width: 768px) {
+        .hidden {
+        position: static;
+        height: initial;
+        overflow: hidden;
+        }
+        }
+
+        @media (max-width: 1024px) {
+        nav .container {
+        left: 50px !important;
+        }
+        }
+
+        @media (max-width: 768px) {
+        nav .container {
+        left: 24px !important;
+        }
+        }
+
+        .nav-1 {
+        margin-right: 0px !important;
+        }
+
+        .nav-2 {
+        margin-left: 0px !important;
+        }
+
+        .bg-dark {
+        background-color: rgba(0, 0, 0, .5) !important;
+        transition: 1s all;
+        }
+
+        .bg-dark.active {
+        box-shadow: 0px 0px 5px #000;
+        background-color: #000 !important;
+        }
+
+        .nav-item .logo.active {
+        width: 100px;
+        height: auto;
+        }
+
+        @media(max-width: 768px) {
+        .nav-item .logo.active {
+        width: 85px;
+        }
+        }
+
+        .carousel-indicators li {
+        border-radius: 50%;
+        height: 13px;
+        width: 13px;
+        margin: 5px;
+        }
+
+        .slogan-1 img {
+        float: left;
+        border: none;
+        width: 100%;
+        background-position: center;
+        background-size: cover;
+        height: 140px;
+        bottom: 50px;
+        }
+
+        .slogan-2 img {
+        float: left;
+        border: none;
+        width: 100%;
+        background-position: center;
+        background-size: cover;
+        height: 140px;
+        bottom: 136px;
+        position: relative;
+        }
+        .center-item{
+        display: flex;
+        flex-direction: row;
+        width: 150px;
+        margin: auto;
+        }
+        #content-2 .center-item{
+        width: 100px;
+        }
+        #content-3 .center-item{
+        width: 116px;
+        }
+        .col-md-12 .t3:hover{
+        cursor: pointer;
+        color: orangered;
+        }
+        .col-md-12 .t1:hover{
+        cursor: pointer;
+        color: orangered;
+        }
+        .col-md-12 .t2:hover{
+        cursor: pointer;
+        color: orangered;
+        }
+        #content-2{
+        display: none;
+        }
+        #content-3{
+        display: none;
+        }
+        #loginForm a {
+        color: #fff;
+        }
+
+        .btn-primary {
+        background: #b87532;
+        border-color: #b87532;
+        }
+
+        .btn-primary:hover {
+        color: #fff;
+        background-color: orangered;
+        border-color: orangered;
+        }
+
+        @media(max-width: 768px) {
+        .gallery-thumbs {
+        display: none;
+        }
+        }
+
+        .hidden {
+        position: relative;
+        height: 100%;
+        }
+
+        @media(max-width: 768px) {
+        .hidden {
+        position: static;
+        height: initial;
+        overflow: hidden;
+        }
+        }
+
+        @media (max-width: 1024px) {
+        nav .container {
+        left: 50px !important;
+        }
+        }
+
+        @media (max-width: 768px) {
+        nav .container {
+        left: 24px !important;
+        }
+        }
+
+        .nav-1 {
+        margin-right: 0px !important;
+        }
+
+        .nav-2 {
+        margin-left: 0px !important;
+        }
+
+        .bg-dark {
+        background-color: rgba(0, 0, 0, .5) !important;
+        transition: 1s all;
+        }
+
+        .bg-dark.active {
+        box-shadow: 0px 0px 5px #000;
+        background-color: #000 !important;
+        }
+
+        .nav-item .logo.active {
+        width: 100px;
+        height: auto;
+        }
+
+        @media(max-width: 768px) {
+        .nav-item .logo.active {
+        width: 85px;
+        }
+        }
+
+        .carousel-indicators li {
+        border-radius: 50%;
+        height: 13px;
+        width: 13px;
+        margin: 5px;
+        }
+
+        .slogan-1 img {
+        float: left;
+        border: none;
+        width: 100%;
+        background-position: center;
+        background-size: cover;
+        height: 140px;
+        bottom: 50px;
+        }
+
+        .slogan-2 img {
+        float: left;
+        border: none;
+        width: 100%;
+        background-position: center;
+        background-size: cover;
+        height: 140px;
+        bottom: 136px;
+        position: relative;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- nav -->
+<div class="hidden">
+    <nav class="navbar navbar-expand-md navbar-fixed-top navbar-dark bg-dark main-nav">
+        <div style="width: 1500px;position: relative;left: 100px;" class="container">
+            <div class="navbar-collapse collapse nav-content order-2">
+                <ul class="nav navbar-nav meau nav-1">
+                    <li class="nav-item">
+                        <a class="nav-link n-1" href="index-2.html">首頁</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link n-1" href="about-1.html">關於店家</a>
+                    </li>
+                </ul>
+            </div>
+            <ul class="nav navbar-nav text-nowrap flex-row mx-md-auto order-1 order-md-2">
+                <li class="nav-item aa">
+                    <a class="nav-link" href="#">
+                        <img class="logo" src="images/logo.png">
+                    </a></li>
+                <button class="navbar-toggler ml-2" type="button" data-toggle="collapse" data-target=".nav-content"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </ul>
+            <div class="ml-auto navbar-collapse collapse nav-content order-3 order-md-3">
+                <ul class="ml-auto nav navbar-nav meau nav-2">
+                    <li class="nav-item">
+                        <a class="nav-link n-1" href="meau-1.html">菜單介紹</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link n-1" href="contact-1.html">聯絡我們</a>
+                    </li>
+                    <li class="nav-item btn-2">
+                        <a class="nav-link s-1" href="#" data-toggle="modal" data-target="#exampleModalCenter">
+                            <img src="images/user-2.png">
+                        </a>
+                        <a class="nav-link s-1" href="Transaction.html">
+                            <img src="images/chat-car.png">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--  -->
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalCenterTitle"></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <!-- 登入 -->
+                    <div style="margin: 0px auto;" class="loginContainer row" id="content-1">
+                        <div class="col-md-12">
+                            <div class="p-3 ">
+                                <div class="titleDiv">
+                                    <h2 class="pagetitle">會員專區</h2>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <section id="loginForm">
+                                            <form autocomplete="off" class="form-horizontal" role="form">
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <!-- <label class="col-md-2 control-label" for="Email">信箱</label>
+                                                            <input autocomplete="false" class="form-control valid"
+                                                                id="Email" name="Email" type="text"> -->
+                                                        <div style="font-size: 21px;" class="text">帳號:<span
+                                                                style="font-size: 17px;"> Abssrt123</span></div>
+                                                    </div>
+                                                </div>
+                                                <!-- <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <label class="col-md-2 control-label"
+                                                                for="Password">密碼</label>
+                                                            <input autocomplete="false" class="form-control valid"
+                                                                id="Password" name="Password" type="password">
+                                                        </div>
+                                                    </div> -->
+                                                <!-- <div class="col-md-offset-2 col-md-10 hideRow">
+                                                        <div class="form-group">
+                                                            <div class="checkbox">
+                                                                <input data-val="true" id="RememberMe" name="RememberMe"
+                                                                    type="checkbox" value="true"><input
+                                                                    name="RememberMe" type="hidden" value="false">
+                                                                <label for="RememberMe">記住我</label>
+                                                            </div>
+                                                        </div>
+                                                    </div> -->
+                                                <div class="form-group">
+                                                    <div class=" col-md-12">
+                                                        <a class="btn  w-100" href="index.html">
+                                                            登出
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <!-- <p class="text-center">
+                                                        <div class="center-item">
+                                                        <div  class="t1"onclick="c1()">註冊新會員</div> | <div class="t2"onclick="c2()">忘記密碼</div>
+                                                        </div>
+                                                    </p> -->
+                                            </form>
+                                        </section>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 註冊 -->
+                    <div style="margin: 0px auto;" class="loginContainer row" id="content-2">
+                        <div class="col-md-12">
+                            <div class="p-3 ">
+                                <div class="titleDiv">
+                                    <h2 class="pagetitle">註冊新會員</h2>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <section id="loginForm">
+                                            <form autocomplete="off" class="form-horizontal" role="form">
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label class="col-md-2 control-label" for="Email">信箱</label>
+                                                        <input autocomplete="false" class="form-control valid"
+                                                            id="Email" name="Email" type="text">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label class="col-md-2 control-label" for="Password">密碼</label>
+                                                        <input autocomplete="false" class="form-control valid"
+                                                            id="Password" name="Password" type="password">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label class="col-md-3 control-label"
+                                                            for="Password">確認密碼</label>
+                                                        <input autocomplete="false" class="form-control valid"
+                                                            id="Password" name="Password" type="password">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <div class=" col-md-12">
+                                                        <input type="submit" value="確認" class="btn btn-primary w-100">
+                                                    </div>
+                                                </div>
+                                                <p class="text-center">
+                                                    <div class="center-item">
+                                                        <div class="t3" onclick="c3()">登入</div> | <div class="t2"
+                                                            onclick="c2()">忘記密碼</div>
+                                                    </div>
+                                                </p>
+                                            </form>
+                                        </section>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 註冊end -->
+                    <!-- 忘記密碼 -->
+                    <div style="margin: 0px auto;" class="loginContainer row" id="content-3">
+                        <div class="col-md-12">
+                            <div class="p-3 ">
+                                <div class="titleDiv">
+                                    <h2 class="pagetitle">忘記密碼</h2>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <section id="loginForm">
+                                            <form autocomplete="off" class="form-horizontal" role="form">
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label class="col-md-3 control-label" for="Email">重設密碼</label>
+                                                        <input autocomplete="false" class="form-control valid"
+                                                            id="Email" name="Email" type="text">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label class="col-md-3 control-label" for="Email">確認密碼</label>
+                                                        <input autocomplete="false" class="form-control valid"
+                                                            id="Email" name="Email" type="text">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <div class=" col-md-12">
+                                                        <input type="submit" value="確認" class="btn btn-primary w-100">
+                                                    </div>
+                                                </div>
+                                                <p class="text-center">
+                                                    <div class="center-item">
+                                                        <div class="t3" onclick="c3()">登入</div> | <div class="t1"
+                                                            onclick="c1()">註冊新會員</div>
+                                                    </div>
+                                                </p>
+                                            </form>
+                                        </section>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- banner -->
+    <div class="banner">
+        <div class="container">
+            <h1 data-aos="fade-up" data-aos-duration="2500">聯絡我們</h1>
+        </div>
+    </div>  
+    <!-- main -->
+    <div class="main">
+        <div class="container">
+            <div data-aos="fade-up" data-aos-duration="2700" class="title-bg">
+                <div class="title-item">
+                    <h3 data-aos="fade-up" data-aos-duration="2500" class="text">Baker contact</h3>
+                    <h5 data-aos="fade-up" data-aos-duration="2700" class="subtitle">Baker的聯絡表單
+                    </h5>
+                </div>
+            </div>
+            <div class="contact-item">
+                <form style="margin-top: 30px;" action="" method="post" name="myform" onsubmit="return check(this);">
+                    <div class="form-group">
+                        <label style="color: #2b2323;" for="name">姓名 <font color="#d60000">*</font></label>
+                        <input style="float: left;margin-bottom: 20px;" required="required" type="text" name="name"
+                            class="form-control" id="name" aria-describedby="emailHelp" placeholder="">
+                    </div>
+                    <div class="form-group">
+                        <label style="color: #2b2323;" for="number">手機號碼 <font color="#d60000">*</font></label>
+                        <input required="required" name="number" type="text
+" class="form-control" id="number" aria-describedby="emailHelp" placeholder="">
+                    </div>
+                    <div class="form-group">
+                        <label style="color: #2b2323;" for="exampleInputEmail1">e-mail<font color="#d60000">*</font>
+                            </label>
+                        <input required="required" name="exampleInputEmail1" type="text
+" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
+                    </div>
+                    <div class="form-group">
+                        <label style="color: #2b2323;" for="name">留言內容</label>
+                        <textarea type="name" class="form-control" name="name" id="name" aria-describedby="emailHelp"
+                            placeholder="請留言...." rows="7"></textarea>
+                    </div>
+                    <button style="width: 30%;background-color: ORANGEred;color:#fff;display: block;margin:0 auto;"
+                        type="submit" class="btn">送出</button>
+                </form>
+            </div>
+          
+        </div>
+    </div>
+    <!-- slogan -->
+    
+
+    <!-- Recommended products -->
+   
+    <!-- map -->
+    <footer class="footer">
+        <div class="map">
+            <div class="container">
+                <div class="map-box rellax" data-rellax-speed="3">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.484677059102!2d121.54631021498813!3d25.051556643741385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442abe8008b7933%3A0xae58816fb61804f4!2zMTA15Y-w5YyX5biC5p2-5bGx5Y2A5Y2X5Lqs5p2x6Lev5LiJ5q61MzUw6Jmf!5e0!3m2!1szh-TW!2stw!4v1581825538292!5m2!1szh-TW!2stw"
+                        width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                </div>
+            </div>
+        </div>
+        <div class="footer-item" data-aos="fade-up" data-aos-duration="2500">
+            <div class="container">
+                <div class="footer-logo">
+                    <img src="images/logo-2.png">
+                </div>
+                <hr style="background: #fff;border: 1px solid #fff;">
+                <div class="footer-navbar">
+                    <div class="footer-meau">
+                        <div class="footer-link"><a href="index-2.html">
+                                首頁
+                            </a></div>
+                        <div class="footer-link"><a href="about-1.html">
+                                關於店家
+                            </a></div>
+                        <div class="footer-link"><a href="meau-1.html">
+                                菜單介紹
+                            </a></div>
+                        <div class="footer-link"><a href="contact-1.html">
+                                聯絡我們
+                            </a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- copyright -->
+        <div class="copyright">
+            <div class="container">
+                <p>Copyright © 2019 Baker-bread All Right Received. | 版權所有 © Baker-bread有限公司</p>
+            </div>
+        </div>
+
+    </footer>
+  
+</div>
+</body>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+</script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+</script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+</script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+<script src="vander/rellax.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="vander/vue-main.js"></script>
+<script>
+    AOS.init();
+
+
+
+    var galleryThumbs = new Swiper('.gallery-thumbs', {
+        spaceBetween: 10,
+        slidesPerView: 4,
+        loop: true,
+        freeMode: true,
+        loopedSlides: 5, //looped slides should be the same
+        watchSlidesVisibility: true,
+        watchSlidesProgress: true,
+    });
+    var galleryTop = new Swiper('.gallery-top', {
+        spaceBetween: 10,
+        loop: true,
+        loopedSlides: 5, //looped slides should be the same
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        thumbs: {
+            swiper: galleryThumbs,
+        },
+    });
+    // Also can pass in optional settings block
+    var rellax = new Rellax('.rellax', {
+        speed: -2,
+        center: false,
+        wrapper: null,
+        round: true,
+        vertical: true,
+        horizontal: false
+    });
+    // 
+    // 登入,忘記密碼,註冊頁面
+    function c1() {
+    $('#content-1').css('display', 'none');
+    $('#content-2').css('display', 'block');
+    $('#content-3').css('display', 'none');
+
+    }
+    function c3() {
+    $('#content-1').css('display', 'block');
+    $('#content-2').css('display', 'none');
+    $('#content-3').css('display', 'none');
+    }
+    function c2() {
+    $('#content-3').css('display', 'block');
+    $('#content-1').css('display', 'none');
+    $('#content-2').css('display', 'none');
+    }
+
+    // 推薦產品選擇器
+    function cake() {
+        $('.Recommended-products-cake').css('display', 'block');
+        $('.Recommended-products-puff').css('display', 'none');
+        $('.Recommended-products-brand').css('display', 'none');
+    }
+
+    function puff() {
+        $('.Recommended-products-cake').css('display', 'none');
+        $('.Recommended-products-puff').css('display', 'block');
+        $('.Recommended-products-brand').css('display', 'none');
+    }
+
+    function brand() {
+        $('.Recommended-products-cake').css('display', 'none');
+        $('.Recommended-products-puff').css('display', 'none');
+        $('.Recommended-products-brand').css('display', 'block');
+    }
+
+    // 導覽列變化
+    $(window).scroll(function () {
+        var screenheight = $(this).height(); // 抓取視窗高度
+        var scrolledpx = $(this).scrollTop(); // 抓取當前視窗距離最上方的距離(滾動距離)
+        // 當滾動超過視窗高度的一半
+        if (scrolledpx >= screenheight / 7 - 100) {
+            $('.bg-dark').addClass('active');
+            $('.nav-item .logo').addClass('active'); // 選取導覽列加上 active
+        } else {
+            $('.bg-dark').removeClass('active');
+            $('.nav-item .logo').removeClass('active'); // 選取導覽列清除 active
+        }
+    })
+</script>
+
+</html>
