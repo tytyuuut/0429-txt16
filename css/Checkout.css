@@ -141,8 +141,6 @@ img {
     .order-md-3{
     top: 5px;
     position: relative;
-    left: 10px;
-
     }
 }
 @media(max-width: 414px){
